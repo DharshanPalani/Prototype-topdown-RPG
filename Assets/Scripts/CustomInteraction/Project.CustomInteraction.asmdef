@@ -1,0 +1,17 @@
+{
+    "name": "Project.CustomInteraction",
+    "rootNamespace": "",
+    "references": [
+        "GUID:cf0e0309de656bd518991e2ac00015ef",
+        "GUID:487cd37dcd7023cf2819e1a7cc55886d"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
