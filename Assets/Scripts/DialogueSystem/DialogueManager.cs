@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour
 
     private int _index;
 
+    private Action _onDialogueEnd;
+
 
     public DialogueScriptableObject dialogue;
 
@@ -36,17 +38,18 @@ public class DialogueManager : MonoBehaviour
                 StopAllCoroutines();
                 _dialoguestarted = false;
                 dialogueText.text = _currentLines[_index];
-                _currentLines = null;
+
             }
         }
     }
 
-    public void StartDialogue(DialogueScriptableObject dialogue)
+    public void StartDialogue(DialogueScriptableObject dialogue, Action onDialogueEnd)
     {
         _dialoguestarted = true;
         dialoguePanel.SetActive(true);
         _currentLines = dialogue.lines;
         _index = 0;
+        _onDialogueEnd = onDialogueEnd;
         StartCoroutine(TypeLine());
     }
 
@@ -72,6 +75,8 @@ public class DialogueManager : MonoBehaviour
         else
         {
             dialoguePanel.SetActive(false);
+            _onDialogueEnd?.Invoke();
+            _onDialogueEnd = null;
         }
     }
 }

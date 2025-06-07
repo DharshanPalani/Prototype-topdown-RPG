@@ -10,7 +10,10 @@ public class Warden_Interaction_KillQuest : MonoBehaviour, IInteractible
 
     public void OnInteract()
     {
-        // FindObjectOfType<QuestManager>().AddQuest(killMonsterQuest);
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, OnDialogueEnd);
+    }
+
+    public void OnDialogueEnd() {
+        FindObjectOfType<QuestManager>().AddQuest(killMonsterQuest);
     }
 }
