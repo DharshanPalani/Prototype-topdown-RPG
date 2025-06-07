@@ -6,9 +6,11 @@ using UnityEngine;
 public class Warden_Interaction_KillQuest : MonoBehaviour, IInteractible
 {
     public Quest killMonsterQuest;
+    public DialogueScriptableObject dialogue;
 
     public void OnInteract()
     {
-        FindObjectOfType<QuestManager>().AddQuest(killMonsterQuest);
+        // FindObjectOfType<QuestManager>().AddQuest(killMonsterQuest);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }

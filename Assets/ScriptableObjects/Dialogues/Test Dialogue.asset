@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8a2195f14bf212399185ad6140938cb, type: 3}
-  m_Name: Quest_greet
+  m_Script: {fileID: 11500000, guid: ad43bd934b591fe2cb6e443df01c7bb9, type: 3}
+  m_Name: Test Dialogue
   m_EditorClassIdentifier: 
-  questName: Greet Quest
-  questReward: 10
+  lines:
+  - Yo, what's up
+  - What you looking at?
+  - GET OU-

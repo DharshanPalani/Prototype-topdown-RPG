@@ -181,11 +181,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 1015782952}
   dialogueText: {fileID: 246589911}
-  lines:
-  - Hello there
-  - What's up
-  - I hope you going good
   textSpeed: 0.03
+  dialogue: {fileID: 11400000, guid: cb13b307d881869de9725bc21c88d816, type: 2}
 --- !u!1 &206711356
 GameObject:
   m_ObjectHideFlags: 0
@@ -5303,6 +5300,7 @@ MonoBehaviour:
     goalAmount: 5
     currentAmount: 0
     isComplete: 0
+  dialogue: {fileID: 11400000, guid: cb13b307d881869de9725bc21c88d816, type: 2}
 --- !u!1 &1015782952
 GameObject:
   m_ObjectHideFlags: 0
@@ -5320,7 +5318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1015782953
 RectTransform:
   m_ObjectHideFlags: 0

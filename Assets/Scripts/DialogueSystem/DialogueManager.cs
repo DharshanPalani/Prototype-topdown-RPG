@@ -7,42 +7,52 @@ public class DialogueManager : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
-    public string[] lines;
     public float textSpeed;
+
+    private bool _dialoguestarted;
 
     private int _index;
 
 
+    public DialogueScriptableObject dialogue;
+
+    private string[] _currentLines;
+
     void Start()
     {
         dialogueText.text = string.Empty;
-        StartDialogue();
+        // StartDialogue(dialogue);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0)) {
-            if (dialogueText.text == lines[_index])
+        if (Input.GetKeyDown(KeyCode.Mouse0) && _dialoguestarted) {
+            if (dialogueText.text == _currentLines[_index])
             {
                 NextLine();
             }
             else
             {
                 StopAllCoroutines();
-                dialogueText.text = lines[_index];
+                _dialoguestarted = false;
+                dialogueText.text = _currentLines[_index];
+                _currentLines = null;
             }
         }
     }
 
-    private void StartDialogue()
+    public void StartDialogue(DialogueScriptableObject dialogue)
     {
+        _dialoguestarted = true;
+        dialoguePanel.SetActive(true);
+        _currentLines = dialogue.lines;
         _index = 0;
         StartCoroutine(TypeLine());
     }
 
     private IEnumerator TypeLine()
     {
-        foreach (char c in lines[_index].ToCharArray())
+        foreach (char c in _currentLines[_index].ToCharArray())
         {
             dialogueText.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -53,7 +63,7 @@ public class DialogueManager : MonoBehaviour
 
     private void NextLine()
     {
-        if (_index < lines.Length - 1)
+        if (_index < _currentLines.Length - 1)
         {
             _index += 1;
             dialogueText.text = string.Empty;
@@ -64,7 +74,4 @@ public class DialogueManager : MonoBehaviour
             dialoguePanel.SetActive(false);
         }
     }
-
-
-    
 }
