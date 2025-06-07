@@ -1,10 +1,8 @@
 {
-    "name": "Project.CustomInteraction",
+    "name": "Project.DialogueSystem",
     "rootNamespace": "",
     "references": [
-        "GUID:cf0e0309de656bd518991e2ac00015ef",
-        "GUID:487cd37dcd7023cf2819e1a7cc55886d",
-        "GUID:54ee8708005d126cead5735444d26983"
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
