@@ -10,11 +10,13 @@ public class DialogueManager : MonoBehaviour
     public float textSpeed;
 
     private bool _dialoguestarted;
+    private bool _isDialogueContinueing;
 
     private int _index;
 
     private Action _onDialogueEnd;
 
+    
 
     public DialogueScriptableObject dialogue;
 
@@ -29,6 +31,14 @@ public class DialogueManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && _dialoguestarted) {
+            if (_isDialogueContinueing)
+            {
+                StopAllCoroutines();
+                dialogueText.text = "";
+                dialogueText.text = _currentLines[_index];
+                _isDialogueContinueing = false;
+                return;
+            }
             if (dialogueText.text == _currentLines[_index])
             {
                 NextLine();
@@ -58,8 +68,11 @@ public class DialogueManager : MonoBehaviour
         foreach (char c in _currentLines[_index].ToCharArray())
         {
             dialogueText.text += c;
+            _isDialogueContinueing = true;
             yield return new WaitForSeconds(textSpeed);
         }
+
+        _isDialogueContinueing = false;
 
         yield return null;
     }
@@ -74,6 +87,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            dialogueText.text = "";
             dialoguePanel.SetActive(false);
             _onDialogueEnd?.Invoke();
             _onDialogueEnd = null;

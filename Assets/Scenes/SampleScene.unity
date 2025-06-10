@@ -5302,6 +5302,8 @@ MonoBehaviour:
     currentAmount: 0
     isComplete: 0
   dialogue: {fileID: 11400000, guid: cb13b307d881869de9725bc21c88d816, type: 2}
+  completeQuestDialogue: {fileID: 11400000, guid: f7b6dc34bc861a039bfd035d3a276cbb, type: 2}
+  npc: 0
 --- !u!1 &1015782952
 GameObject:
   m_ObjectHideFlags: 0
