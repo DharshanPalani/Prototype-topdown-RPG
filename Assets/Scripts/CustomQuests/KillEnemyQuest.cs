@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class KillEnemyQuest : MonoBehaviour
 {
-    void Update()
+
+    public int questID;
+
+    public void updateKilledMoster()
     {
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            FindObjectOfType<QuestManager>()?.AddProgress(1,1);
-        }
+        FindObjectOfType<QuestManager>().AddProgress(questID, 1);
     }
 }
