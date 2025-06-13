@@ -1,10 +1,24 @@
 using System.Collections.Generic;
-using PlasticPipe.PlasticProtocol.Messages;
 using UnityEngine;
 
 public class QuestManager : MonoBehaviour
 {
     public Dictionary<int, Quest> activeQuests = new Dictionary<int, Quest>();
+
+    void Update()
+    {
+        List<string> questNames = new List<string>();
+        foreach (var quest in activeQuests.Values)
+        {
+            if (!quest.isComplete)
+            {
+                questNames.Add(quest.questName);
+            }
+        }
+
+        FindObjectOfType<QuestUI>().questUpdateUI(questNames);
+    }
+
 
     public void AddProgress(int amount, int id)
     {
@@ -16,11 +30,10 @@ public class QuestManager : MonoBehaviour
 
     public void AddQuest(Quest quest)
     {
-        Debug.Log("Call from addquest");
+        Debug.Log("Call from AddQuest");
         if (activeQuests.ContainsKey(quest.questID))
-            Debug.Log("Quest alread added or done");
+            Debug.Log("Quest already added or done");
         else
-            activeQuests.Add(quest.questID, quest);   
+            activeQuests.Add(quest.questID, quest);
     }
-
 }
