@@ -57,6 +57,7 @@ public class DialogueManager : MonoBehaviour
     {
         _dialoguestarted = true;
         dialoguePanel.SetActive(true);
+        dialogueText.text = "";
         _currentLines = dialogue.lines;
         _index = 0;
         _onDialogueEnd = onDialogueEnd;
