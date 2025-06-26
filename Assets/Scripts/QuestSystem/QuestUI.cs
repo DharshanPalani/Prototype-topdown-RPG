@@ -22,6 +22,8 @@ public class QuestUI : MonoBehaviour
             builder.AppendLine(questName);
         }
 
+        Debug.Log(questList.text);
+
         questList.text = builder.ToString();
     }
 }

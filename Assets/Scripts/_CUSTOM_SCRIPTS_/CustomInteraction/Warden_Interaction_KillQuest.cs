@@ -22,7 +22,7 @@ public class Warden_Interaction_KillQuest : MonoBehaviour, IInteractible
 
     void Update()
     {
-        if (killMonsterQuest.isComplete)
+        if (killMonsterQuest.isComplete & npc != npcState.COMPLETE_TALKED)
         {
             npc = npcState.COMPLETE_QUEST_TALK;
         }
@@ -43,6 +43,7 @@ public class Warden_Interaction_KillQuest : MonoBehaviour, IInteractible
                 npc = npcState.COMPLETE_TALKED;
                 break;
             case npcState.COMPLETE_TALKED:
+                SwitchSceneEvent.OnSceneApprove?.Invoke();
                 break;
         }
 
