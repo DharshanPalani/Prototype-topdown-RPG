@@ -1,13 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 
 public class SceneSwitch : MonoBehaviour
 {
-
-    [SerializeField] private string sceneName;
+    public GameObject triggerPoint;
 
     void OnEnable()
     {
@@ -21,6 +18,6 @@ public class SceneSwitch : MonoBehaviour
 
     public void approveSceneSwitch()
     {
-        SceneManager.LoadScene(sceneName);
+        triggerPoint.SetActive(true);
     }
 }

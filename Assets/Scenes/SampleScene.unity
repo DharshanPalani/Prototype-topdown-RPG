@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e67ddddb44c3a94e971746897afa6da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: CutScene
+  triggerPoint: {fileID: 700793420}
 --- !u!1 &206711356
 GameObject:
   m_ObjectHideFlags: 0
@@ -4802,7 +4802,7 @@ GameObject:
   - component: {fileID: 367528368}
   m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5242,13 +5242,14 @@ GameObject:
   m_Component:
   - component: {fileID: 700793421}
   - component: {fileID: 700793422}
+  - component: {fileID: 700793423}
   m_Layer: 0
   m_Name: SceneSwitcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &700793421
 Transform:
   m_ObjectHideFlags: 0
@@ -5309,6 +5310,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 5}
   m_EdgeRadius: 0
+--- !u!114 &700793423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700793420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ff17e404c51b846a45cdce75e01bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Cutscene
 --- !u!1 &813799203
 GameObject:
   m_ObjectHideFlags: 0

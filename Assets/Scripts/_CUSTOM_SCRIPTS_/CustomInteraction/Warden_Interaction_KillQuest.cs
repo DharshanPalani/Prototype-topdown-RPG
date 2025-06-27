@@ -41,9 +41,9 @@ public class Warden_Interaction_KillQuest : MonoBehaviour, IInteractible
             case npcState.COMPLETE_QUEST_TALK:
                 FindObjectOfType<DialogueManager>().StartDialogue(completeQuestDialogue, null);
                 npc = npcState.COMPLETE_TALKED;
+                SwitchSceneEvent.OnSceneApprove?.Invoke();
                 break;
             case npcState.COMPLETE_TALKED:
-                SwitchSceneEvent.OnSceneApprove?.Invoke();
                 break;
         }
 
