@@ -1,61 +1,59 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager Instance { get; private set; }
+    public static bool IsDialogueRunning { get; private set; }
+
     public GameObject dialoguePanel;
     public TextMeshProUGUI dialogueText;
     public float textSpeed;
 
-    private bool _dialoguestarted;
     private bool _isDialogueContinueing;
-
     private int _index;
-
     private Action _onDialogueEnd;
-
-    
-
-    public DialogueScriptableObject dialogue;
-
     private string[] _currentLines;
 
-    void Start()
+    void Awake()
     {
-        dialogueText.text = string.Empty;
-        // StartDialogue(dialogue);
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && _dialoguestarted) {
+        if (!IsDialogueRunning) return;
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
             if (_isDialogueContinueing)
             {
                 StopAllCoroutines();
-                dialogueText.text = "";
                 dialogueText.text = _currentLines[_index];
                 _isDialogueContinueing = false;
                 return;
             }
+
             if (dialogueText.text == _currentLines[_index])
             {
                 NextLine();
             }
-            else
-            {
-                StopAllCoroutines();
-                _dialoguestarted = false;
-                dialogueText.text = _currentLines[_index];
-
-            }
         }
     }
 
-    public void StartDialogue(DialogueScriptableObject dialogue, Action onDialogueEnd)
+    public void StartDialogue(DialogueScriptableObject dialogue, Action onDialogueEnd = null)
     {
-        _dialoguestarted = true;
+        if (IsDialogueRunning) return;
+
+        IsDialogueRunning = true;
         dialoguePanel.SetActive(true);
         dialogueText.text = "";
         _currentLines = dialogue.lines;
@@ -66,32 +64,32 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator TypeLine()
     {
-        foreach (char c in _currentLines[_index].ToCharArray())
+        _isDialogueContinueing = true;
+        dialogueText.text = "";
+
+        foreach (char c in _currentLines[_index])
         {
             dialogueText.text += c;
-            _isDialogueContinueing = true;
             yield return new WaitForSeconds(textSpeed);
         }
 
         _isDialogueContinueing = false;
-
-        yield return null;
     }
 
     private void NextLine()
     {
         if (_index < _currentLines.Length - 1)
         {
-            _index += 1;
-            dialogueText.text = string.Empty;
+            _index++;
             StartCoroutine(TypeLine());
         }
         else
         {
-            dialogueText.text = "";
             dialoguePanel.SetActive(false);
+            dialogueText.text = "";
             _onDialogueEnd?.Invoke();
             _onDialogueEnd = null;
+            IsDialogueRunning = false;
         }
     }
 }

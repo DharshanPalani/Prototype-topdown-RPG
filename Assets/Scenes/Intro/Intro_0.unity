@@ -5402,8 +5402,7 @@ GameObject:
   - component: {fileID: 984591756}
   - component: {fileID: 984591755}
   - component: {fileID: 984591757}
-  - component: {fileID: 984591759}
-  - component: {fileID: 984591760}
+  - component: {fileID: 984591758}
   m_Layer: 3
   m_Name: NPC
   m_TagString: Untagged
@@ -5523,7 +5522,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &984591759
+--- !u!114 &984591758
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5532,32 +5531,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 984591754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a2df0ab3176e83b88c5aed6fb894dc8, type: 3}
+  m_Script: {fileID: 11500000, guid: ee9bbd30c45d0434fa5976424fbd7f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questID: 1
---- !u!114 &984591760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984591754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a1ef2f3770917e2989c88328edb99d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  killMonsterQuest:
+  boatQuest:
     questID: 1
-    questName: Kill monster
-    description: Kill the low aura moster
+    questName: Fix the boat
+    description: Repair the slightly broken boat for some golds
     goalAmount: 1
     currentAmount: 0
     isComplete: 0
-  dialogue: {fileID: 11400000, guid: cb13b307d881869de9725bc21c88d816, type: 2}
-  completeQuestDialogue: {fileID: 11400000, guid: f7b6dc34bc861a039bfd035d3a276cbb, type: 2}
-  npc: 0
+  state: 0
+  QuestDialogue: {fileID: 11400000, guid: 244800c3035bdd141a3c46693709cdb9, type: 2}
+  QuestGuideDialogue: {fileID: 11400000, guid: bc1b337171eafb54da811142eef6a37e, type: 2}
+  QuestAfterDialogue: {fileID: 11400000, guid: 56f8e897756b6244289861b7c26d5623, type: 2}
 --- !u!1 &1015782952
 GameObject:
   m_ObjectHideFlags: 0

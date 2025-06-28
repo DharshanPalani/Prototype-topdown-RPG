@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad43bd934b591fe2cb6e443df01c7bb9, type: 3}
+  m_Name: OldMan_1
+  m_EditorClassIdentifier: 
+  lines:
+  - The boat is over there if you walk a bit front
+  - The raw materials like wood, hammer are there as well
+  - There is just one small hole so it shouldn't take you that much time
+  - Especially for a young soul like you
+  - With a higher will
+  - Compared to us old guys, hahaha...

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad43bd934b591fe2cb6e443df01c7bb9, type: 3}
+  m_Name: OldMan_0
+  m_EditorClassIdentifier: 
+  lines:
+  - Hey young human
+  - It's nice to see a young soul in such a long time
+  - Anyways...
+  - You see...
+  - I always come to this island on my weekend...
+  - To spend some time here and chill
+  - But I forgot to check the leakages on my boat...
+  - And thank god that boat broke down right when I arrived on this island
+  - But ever since then...
+  - I couldn't leave due to the broken boat...
+  - I have the raw materials and all but...
+  - I don't know how to fix the boat so...
+  - If you know how to fix the boat...
+  - Fix it for me.
