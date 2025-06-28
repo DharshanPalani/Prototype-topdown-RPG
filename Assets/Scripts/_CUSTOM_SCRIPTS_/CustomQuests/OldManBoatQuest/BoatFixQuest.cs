@@ -3,14 +3,15 @@ using UnityEngine;
 public enum boatQuestState
 {
     NOT_COLLECTED_ITEMS,
-    COLLECTED_ITEMS,
     NOT_FIXED_BOAT,
-    FIXED_BOAT
+    FIXED_BOAT,
+    FINISHED_BOAT_QUEST
 }
 
 public class BoatFixQuest : MonoBehaviour
 {
-    public boatQuestState state = boatQuestState.NOT_FIXED_BOAT;
+    public int questID;
+    public boatQuestState state;
     public KeyCode fixKey = KeyCode.E;
     public float holdTime = 10f;
 
@@ -19,6 +20,14 @@ public class BoatFixQuest : MonoBehaviour
 
     void Update()
     {
+        if (state == boatQuestState.FINISHED_BOAT_QUEST) return;
+
+        if (state == boatQuestState.FIXED_BOAT)
+        {
+            state = boatQuestState.FINISHED_BOAT_QUEST;
+            FindObjectOfType<QuestManager>().AddProgress(1, questID);
+        }
+
         if (state != boatQuestState.NOT_FIXED_BOAT || !playerInRange) return;
 
         if (Input.GetKey(fixKey))
