@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using interact;
 using UnityEngine;
 
-
 public enum npcState
 {
     NOT_TALKED,
