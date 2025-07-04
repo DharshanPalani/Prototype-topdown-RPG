@@ -318,7 +318,6 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1015782952}
   dialogueText: {fileID: 246589911}
   textSpeed: 0.03
-  dialogue: {fileID: 11400000, guid: cb13b307d881869de9725bc21c88d816, type: 2}
 --- !u!114 &79962371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5517,11 +5516,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 984591754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5260e98de1a37964ca0801bae93242f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 814ccd8c60db970489a67a23e79a4dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  betraylDialogue: {fileID: 11400000, guid: 52bae0df5f376114880c667b69314b9a, type: 2}
-  npc: 0
+  oldManFinalDialogue: {fileID: 11400000, guid: 7267939a760160847a61e1f072cb5c9b, type: 2}
 --- !u!1 &1015782952
 GameObject:
   m_ObjectHideFlags: 0
