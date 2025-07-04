@@ -5534,6 +5534,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &823431409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 823431411}
+  - component: {fileID: 823431410}
+  m_Layer: 0
+  m_Name: OldManPlayableDirector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &823431410
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823431409}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: c923a114a7bf30f43a7ee911fe7ade67, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 8125885678701974099, guid: c923a114a7bf30f43a7ee911fe7ade67, type: 2}
+    value: {fileID: 984591759}
+  - key: {fileID: -4897126438272166106, guid: c923a114a7bf30f43a7ee911fe7ade67, type: 2}
+    value: {fileID: 1450062168}
+  m_ExposedReferences:
+    m_References:
+    - 88c5c7aa8138aee4389eda424c6267fe: {fileID: 367528360}
+--- !u!4 &823431411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 823431409}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.2628093, y: 1.766088, z: -0.07904574}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &984591754
 GameObject:
   m_ObjectHideFlags: 0
@@ -5546,6 +5600,7 @@ GameObject:
   - component: {fileID: 984591755}
   - component: {fileID: 984591757}
   - component: {fileID: 984591758}
+  - component: {fileID: 984591759}
   m_Layer: 3
   m_Name: NPC
   m_TagString: Untagged
@@ -5688,6 +5743,28 @@ MonoBehaviour:
   QuestDialogue: {fileID: 11400000, guid: 244800c3035bdd141a3c46693709cdb9, type: 2}
   QuestGuideDialogue: {fileID: 11400000, guid: bc1b337171eafb54da811142eef6a37e, type: 2}
   QuestAfterDialogue: {fileID: 11400000, guid: 56f8e897756b6244289861b7c26d5623, type: 2}
+  oldManCutSceneDirector: {fileID: 823431410}
+--- !u!95 &984591759
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984591754}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1015782952
 GameObject:
   m_ObjectHideFlags: 0
@@ -5822,6 +5899,7 @@ GameObject:
   - component: {fileID: 1450062165}
   - component: {fileID: 1450062166}
   - component: {fileID: 1450062167}
+  - component: {fileID: 1450062168}
   m_Layer: 3
   m_Name: Boat
   m_TagString: Untagged
@@ -5890,7 +5968,7 @@ Transform:
   m_GameObject: {fileID: 1450062160}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.82, y: 2.8, z: 0}
+  m_LocalPosition: {x: 9.189, y: 0.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5992,6 +6070,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &1450062168
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450062160}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1861658855
 GameObject:
   m_ObjectHideFlags: 0
@@ -6167,3 +6266,4 @@ SceneRoots:
   - {fileID: 1450062164}
   - {fileID: 558459276}
   - {fileID: 700793421}
+  - {fileID: 823431411}

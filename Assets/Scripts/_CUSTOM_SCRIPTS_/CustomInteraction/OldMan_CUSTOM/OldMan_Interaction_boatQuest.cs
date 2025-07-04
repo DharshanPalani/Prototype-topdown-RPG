@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using interact;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class OldMan_Interaction_boat_quest : MonoBehaviour, IInteractible
@@ -13,6 +14,8 @@ public class OldMan_Interaction_boat_quest : MonoBehaviour, IInteractible
     public DialogueScriptableObject QuestDialogue;
     public DialogueScriptableObject QuestGuideDialogue;
     public DialogueScriptableObject QuestAfterDialogue;
+
+    public PlayableDirector oldManCutSceneDirector;
 
     void Update()
     {
@@ -47,6 +50,8 @@ public class OldMan_Interaction_boat_quest : MonoBehaviour, IInteractible
 
     private void AfterQuestFinishAndTalkAction()
     {
-        Debug.Log("Do shit here after quest finish talk");
+        oldManCutSceneDirector.Play();
+        SwitchSceneEvent.OnSceneApprove?.Invoke();
+        // Debug.Log("Do shit here after quest finish talk");
     }
 }
