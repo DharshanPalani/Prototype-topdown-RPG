@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Intro/Intro_1.unity
     guid: a4932051f27464e40858791dfbdc72a2
+  - enabled: 1
+    path: Assets/Scenes/Abyss/Abyss_0.unity
+    guid: 2a0a449999387dc418ffc90d82ed8d66
   m_configObjects: {}
