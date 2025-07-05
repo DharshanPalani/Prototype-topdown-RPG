@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad43bd934b591fe2cb6e443df01c7bb9, type: 3}
+  m_Name: Alley_1
+  m_EditorClassIdentifier: 
+  lines:
+  - 'Luna: Thank god you are awake'
+  - 'Luna: Wait, can''t you see me?'
+  - 'Luna: You can see me right?'
+  - 'Luna: That''s amazing.'
+  - 'Luna: Well anyways, you were in the civil war speech'
+  - 'Luna: That speech was amazing right?'
+  - 'Luna: Well anyways now we are inside the castle'
+  - 'Luna: And your hands were bloody and your body looked strong'
+  - 'Luna: And I assume you must be strong right?'
+  - 'Luna: Well we can''t debate if you are strong or not, we are currently inside
+    the castle.'
+  - 'Luna: And our goal is kill the BL4Z3 leader, ninja'
+  - 'Luna: Your face kinda lits up when I say that name'
+  - 'Luna: Are you prehaps interested?'
+  - 'Luna: In killing him?'
+  - 'Luna: I hope you are interested'
+  - 'Luna: He is indeed weak by himself but he has a ally, a strong one'
+  - 'Luna: He is a strong one'
+  - 'Luna: His name is viper'
+  - 'Luna: And speaking of name'
+  - 'Luna: What''s your name again?'

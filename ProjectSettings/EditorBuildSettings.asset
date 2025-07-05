@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Abyss/Abyss_0.unity
     guid: 2a0a449999387dc418ffc90d82ed8d66
+  - enabled: 1
+    path: Assets/Scenes/Alley/Alley_0.unity
+    guid: faf68b04a64b8fc4aa95aee12652512f
+  - enabled: 1
+    path: Assets/Scenes/Alley/Alley_1.unity
+    guid: 5987440e0531e294fad3bade7c7cce8c
   m_configObjects: {}
